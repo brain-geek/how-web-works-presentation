@@ -19,6 +19,11 @@
       width: 25%;
       height: 25%;
       }
+
+      #telnet code {
+        font-size: 80%;
+        line-height: 180%;
+      }
     </style>
 </head>
 <body class="list">
@@ -56,12 +61,21 @@
 
 	<div class="slide"><div>
 		<header>
-			<h2>It's more like this!</h2>
+			<h2>It's more like this</h2>
 		</header>
 
 		<img src="pictures/highway.jpg" alt="" class="middle">
 		</section>
 	</div></div>
+
+  <div class="slide"><div>
+    <header>
+      <h2>Or this!</h2>
+    </header>
+
+    <img src="pictures/russian-doll.jpg" alt="" class="middle" style="width:80%">
+    </section>
+  </div></div>
 
   <div class="slide shout"><div>
     <section>
@@ -80,59 +94,53 @@
       <p>
         <table width="100%">
         	<tr>
-        		<td>Binary</td>
-        		<td>Oct</td>	
+        		<td>Binary(bits and bytes)</td>
         		<td>Dec</td>	
-        		<td>Hex</td>	
         		<td>Symbol</td>
         	<tr>
-        		<td>110 1000</td>	<td>150</td>	<td>104</td>	<td>68</td>	<td>h</td>
+        		<td>0110 1000</td>	<td>104</td> <td>h</td>
         	</tr>
       		<tr>
-      			<td>110 0101</td>	<td>145</td>	<td>101</td>	<td>65</td>	<td>e</td>
+      			<td>0110 0101</td>	<td>101</td> <td>e</td>
       		</tr>
       		<tr>
-      			<td>110 1100</td>	<td>154</td>	<td>108</td>	<td>6C</td>	<td>l</td>
+      			<td>0110 1100</td>	<td>108</td> <td>l</td>
       		</tr>
 					<tr>
-						<td>110 1100</td>	<td>154</td>	<td>108</td>	<td>6C</td>	<td>l</td>
+						<td>0110 1100</td>	<td>108</td> <td>l</td>
 					</tr>
 					<tr>
-						<td>110 1111</td>	<td>157</td>	<td>111</td>	<td>6F</td>	<td>o</td>
+						<td>0110 1111</td>	<td>111</td> <td>o</td>
 					</tr>
 					<tr>
-						<td>010 0001</td>	<td>041</td>	<td>33</td>	<td>21</td><td>!</td>
+						<td>0010 0001</td>	<td>33</td> <td>!</td>
 					</tr>
 				</table>
       </p>
     </section>
   </div></div>
 
-  <div class="slide shout"><div>
+ 
+  <div class="slide"><div>
     <section>
       <header>
         <h2>Encodings</h2>
       </header>
-    </section>
-  </div></div>
 
-	<div class="slide"><div>
-		<section>
-			<header>
-				<h2>Encodings you would like to remember about</h2>
-			</header>
 			<ul>
 				<li><b>ASCII</b></li>
 
-				<li>Unicode(<b>UTF-8</b>, UTF-16)</li>
+				<li>Unicode (<b>UTF-8</b>, UTF-16)</li>
 
 				<li>Windows-1251</li>
 
-				<li>KOI8-R</li>
+        <li>KOI8-R</li>
+
+        <li>And a lot more</li>
 			</blockquote>
 		</section>
 	</div></div>
-
+<!--
   <div class="slide"><div>
     <section>
       <header>
@@ -142,6 +150,34 @@
       <p class="note">
         I've made a simple program, using which we'll try to see difference between encoding. Everything you need to remember - there are a lot of encodings in the wild. If there is a choise - you should use UTF-8 encoding.
       </p>
+    </section>
+  </div></div> -->
+
+  <div class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Computing</h2>
+      </header>
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <img src="pictures/pc.jpg" alt="" class="middle">
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <section>
+      <header>
+        <h2>What's really inside?</h2>
+      </header>
+
+      <ul>
+        <li>CPU (Central processing unit)</li>
+        <li>Memory (long-term and short-term)</li>
+        <li>Data input and output (audio, video, keyboard, mouse) </li>
+        <li>Supporting part (electricity, cooling, etc.)</li>
+      </ul>
     </section>
   </div></div>
 
@@ -223,24 +259,33 @@
     </header>
 
     <p>
-      No, you have really seen this before. <b>http</b>://google.com.
-    </p>
-    <p>
       How does it work? Lets see an example.
     </p>
     </section>
   </div></div>
 
-
-
-
-
-
-
-
-
-
-
+  <section class="slide" id="telnet">
+    <div>    
+      <pre>
+        <code><i>telnet 173.194.70.139 80</i></code>
+        <code>Trying 173.194.70.139...</code>
+        <code>Connected to 173.194.70.139.</code>
+        <code>Escape character is '^]'.</code>
+        <code><b>GET / HTTP/1.0</b></code>
+        <code><b>Host: www.google.com.ua</b></code>
+        
+        <hr/>
+        
+        <code>HTTP/1.0 200 OK</code>
+        <code>Date: Sun, 10 Feb 2013 19:51:33 GMT</code>
+        <code>Expires: -1</code>
+        <code>Cache-Control: private, max-age=0</code>
+        <code>Content-Type: text/html; charset=windows-1251</code>
+        <code>Set-Cookie: NID=67=dFXklL_uUPmVI; expires=Mon, 12-Aug-2013 19:51:33 GMT; </code>
+        <code>path=/; domain=.google.com.ua; HttpOnly</code>
+      </pre>
+    </div>
+  </section>
 
   <div class="slide"><div>
     <section>
@@ -268,7 +313,7 @@
       <figure>
         <blockquote>
           <p>
-            The Domain Name System (DNS) is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates domain names meaningful for users to the numerical IP addresses needed for the purpose of locating computer services and devices worldwide. By providing a worldwide, distributed keyword-based redirection service, the Domain Name System is an essential component of the functionality of the Internet.
+            The Domain Name System is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. It translates domain names meaningful for users to the numerical IP addresses needed for the purpose of locating computer services and devices worldwide. By providing a worldwide, distributed keyword-based redirection service, the Domain Name System is an essential component of the functionality of the Internet.
           </p>
         </blockquote>
         <figcaption>Wikipedia</figcaption>
@@ -278,12 +323,10 @@
 
   <div class="slide"><div>
     <img src="pictures/dns-1.png" alt="" class="middle">
-    </section>
   </div></div>
 
   <div class="slide"><div>
     <img src="pictures/dns-zones.png" alt="" class="middle">
-    </section>
   </div></div>
 
   <div class="slide"><div>
@@ -292,18 +335,123 @@
         <h2>DNS</h2>
       </header>
       <p class="noted">
-        Wow, lot of nerdy things! How is it connected to my own domain 'blabla.com'?
+        Wow, lot of things! How is it connected to my domain 'innovecs.com'?
       </p>
     </section>
   </div></div>
 
+  <div class="slide"><div>
+    <img src="pictures/dns.jpg" alt="" class="middle">
+  </div></div>
+
+
+  <div class="slide shout"><div>
+    <section>
+      <header>
+        <h2>HTML</h2>
+      </header>
+    </section>
+  </div></div>
+
+
+  <div class="slide"><div>
+    <section>
+      <header>
+        <h2>HTML</h2>
+      </header>
+
+      <figure>
+        <blockquote>
+          <p>
+            HyperText Markup Language (HTML) is the main markup language for creating web pages and other information that can be displayed in a web browser. HTML allows images and objects to be embedded and can be used to create interactive forms. It can embed scripts written in languages such as JavaScript which affect the behavior of HTML web pages. Web browsers can also refer to Cascading Style Sheets (CSS) to define the appearance and layout of text and other material. 
+          </p>
+        </blockquote>
+        <figcaption>Wikipedia</figcaption>
+      </figure>
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <section>
+      <header>
+        <h2>HTML</h2>
+      </header>
+      <pre>
+        <code>&lt;!DOCTYPE html&gt;</code>
+        <code>&lt;html&gt;</code>
+        <code>  &lt;head&gt;</code>
+        <code>    &lt;title&gt;Hello HTML&lt;/title&gt;</code>
+        <code>  &lt;/head&gt;</code>
+        <code>  &lt;body&gt;</code>
+        <code>    &lt;p&gt;Hello World!&lt;/p&gt;</code>
+        <code>  &lt;/body&gt;</code>
+        <code>&lt;/html&gt;</code>
+      </pre>
+    </section>
+  </div></div>
+ 
+  <div class="slide"><div>
+    <section>
+      <header>
+        <h2>HTML</h2>
+      </header>
+
+      <ul>
+        <li>Images can be embedded</li>
+
+        <li>Styling can be applied (CSS)</li>
+
+        <li>Pages can have some logic (Javascript)</li>
+
+        <li>Browser plugins can bring additional functions (Adobe Flash, Microsoft Silverlight, AdBlock)</li>
+      </blockquote>
+    </section>
+  </div></div>
+
+  <div class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Infrastructure</h2>
+      </header>
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <header>
+      <h2>First web server</h2>
+    </header>
+
+    <img src="pictures/first-web-server.jpg" alt="" class="middle" height="65%">
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <header>
+      <h2>Modern web servers (wikipedia)</h2>
+    </header>
+
+    <img src="pictures/servers.jpg" alt="" class="middle" height="65%">
+    </section>
+  </div></div>
+
+  <div class="slide"><div>
+    <header>
+      <h2>Modern web servers ("cloud" version)</h2>
+    </header>
+
+    <img src="pictures/amazon-servers.png" alt="" class="middle" height="65%">
+    </section>
+  </div></div>
+
+
+<!-- 
   <div class="slide shout" id="thank_you"><div>
     <section>
       <header>
         <h2>Mailing works in a similar way. But I don't realy have time for this. :(</h2>       
       </header>
     </section>
-  </div></div>
+  </div></div> -->
 
 	<div class="slide" id="sources"><div>
 		<section>
@@ -316,11 +464,16 @@
 				<li>Road illustrations: <a href="http://www.avtopomich.com.ua/news/na_yakikh_dorogakh_vod_yam_dovoditsya_ne_solodko/">1</a>, <a href="http://frjamescoles.wordpress.com/2009/12/09/clear-a-highway-across-the-desert-for-our-god/">2</a></li>
         <li>Amaizingly simple <a href="http://bio3d.colorado.edu/tor/sadocs/dns/dns.html">DNS inforaphics</a></li>
 				<li><a href="http://www.isoc.org/inet99/proceedings/1e/1e_1.htm">Internet logical structure</a></li>
+        <li><a href="http://www.lavka-podarkov.ru/upload/iblock/cc9/_DSC0075_full.jpg">Russian doll image</a></li>
+        <li><a href="http://daddyforever.com/2010/04/19/computer-innards/">Computer teardown</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_08.jpg">Wikipedia servers</a></li>
+        <li><a href="http://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/managing-ec2.html">Amazon EC2 documentation</a></li>
+        <li><a href="http://www.wix.com/support/main/html5/domains-email/managing-your-domain-records">WIX documentation</a></li>
 			</ul>
 		</section>
 	</div></div>
 
-	<div class="slide shout" id="thank_you"><div>
+	<div class="slide shout"><div>
 		<section>
 			<header>
 				<h2>Thank you!<br />
